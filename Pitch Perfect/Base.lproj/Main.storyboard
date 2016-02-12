@@ -81,7 +81,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GJY-Q9-pz1">
-                                <rect key="frame" x="185" y="114" width="100" height="100"/>
+                                <rect key="frame" x="200" y="114" width="100" height="100"/>
                                 <state key="normal" image="FastPlayback"/>
                                 <connections>
                                     <action selector="playFastAudio:" destination="Joa-L8-ret" eventType="touchUpInside" id="y31-L5-pfs"/>
@@ -102,7 +102,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BdC-qJ-q4F">
-                                <rect key="frame" x="185" y="264" width="100" height="100"/>
+                                <rect key="frame" x="200" y="264" width="100" height="100"/>
                                 <state key="normal" image="DarthVader"/>
                                 <connections>
                                     <action selector="playDarthVaderAudio:" destination="Joa-L8-ret" eventType="touchUpInside" id="a48-rB-h1Q"/>
@@ -114,8 +114,8 @@
                             <constraint firstItem="XDd-hs-Tph" firstAttribute="centerX" secondItem="DBA-eq-eFl" secondAttribute="centerX" id="5gR-IU-bwM"/>
                             <constraint firstItem="JgG-Kb-y6q" firstAttribute="top" secondItem="XV5-Zd-MfN" secondAttribute="bottom" constant="50" id="SKN-Uv-CUT"/>
                             <constraint firstItem="XV5-Zd-MfN" firstAttribute="leading" secondItem="DBA-eq-eFl" secondAttribute="leadingMargin" constant="10" id="SjM-eD-jv6"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="GJY-Q9-pz1" secondAttribute="trailing" constant="20" id="Sm4-Su-bKv"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="BdC-qJ-q4F" secondAttribute="trailing" constant="20" id="iPU-0c-wJQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GJY-Q9-pz1" secondAttribute="trailing" constant="10" id="Sm4-Su-bKv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="BdC-qJ-q4F" secondAttribute="trailing" constant="10" id="iPU-0c-wJQ"/>
                             <constraint firstItem="GJY-Q9-pz1" firstAttribute="top" secondItem="ZUq-PS-OrO" secondAttribute="bottom" constant="50" id="jvX-29-Wsr"/>
                             <constraint firstItem="BdC-qJ-q4F" firstAttribute="top" secondItem="GJY-Q9-pz1" secondAttribute="bottom" constant="50" id="rqV-H3-KO2"/>
                             <constraint firstItem="dJp-Hk-9Az" firstAttribute="top" secondItem="XDd-hs-Tph" secondAttribute="bottom" constant="58" id="rrJ-KR-1FL"/>
