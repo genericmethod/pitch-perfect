@@ -17,20 +17,11 @@ class RecordSoundViewController: UIViewController, AVAudioRecorderDelegate {
     var audioRecorder:AVAudioRecorder!
     var recordedAudio:RecordedAudio!
     
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
     override func viewWillAppear(animated: Bool) {
         stopButton.hidden = true
         recordingStatusLabel.hidden = false
         microphoneButton.enabled = true
         recordingStatusLabel.text = "Tap to Record"
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
     }
     
     func audioRecorderDidFinishRecording(recorder: AVAudioRecorder!, successfully flag: Bool) {
@@ -39,7 +30,7 @@ class RecordSoundViewController: UIViewController, AVAudioRecorderDelegate {
             let session = AVAudioSession.sharedInstance()
             try! session.setCategory(AVAudioSessionCategoryPlayback)
             
-            self.performSegueWithIdentifier("stopRecord", sender: recordedAudio)
+            performSegueWithIdentifier("stopRecord", sender: recordedAudio)
         }
     }
     
@@ -78,9 +69,9 @@ class RecordSoundViewController: UIViewController, AVAudioRecorderDelegate {
     }
     
     @IBAction func stopRecordAudio(sender: UIButton) {
-        recordingStatusLabel.hidden = true;
-        stopButton.hidden = true;
-        microphoneButton.enabled = true;
+        recordingStatusLabel.hidden = true
+        stopButton.hidden = true
+        microphoneButton.enabled = true
         
         audioRecorder.stop()
         let audioSession = AVAudioSession.sharedInstance()

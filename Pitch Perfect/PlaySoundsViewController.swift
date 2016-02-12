@@ -39,7 +39,7 @@ class PlaySoundsViewController: UIViewController {
     }
     
     func playAudioWithVariableRate(rate: Float){
-        player.rate = rate;
+        player.rate = rate
         player.play()
     }
     

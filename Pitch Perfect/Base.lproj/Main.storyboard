@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -35,7 +36,7 @@
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" image="Stop"/>
                                 <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="175" y="530" width="50" height="50"/>
+                                    <rect key="frame" x="175" y="485" width="50" height="50"/>
                                 </variation>
                                 <connections>
                                     <action selector="stopRecordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="srt-tP-HfV"/>
@@ -58,12 +59,12 @@
                                 <exclude reference="PRX-f6-rRD"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="6qA-b3-Wov"/>
+                                <exclude reference="E0i-5z-qdW"/>
                                 <exclude reference="3Xz-yd-ulx"/>
                                 <exclude reference="gsX-nG-AbF"/>
                                 <exclude reference="3fY-LC-hE4"/>
                                 <exclude reference="lFW-i3-v0F"/>
-                                <exclude reference="E0i-5z-qdW"/>
-                                <exclude reference="6qA-b3-Wov"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -73,12 +74,12 @@
                                 <include reference="PRX-f6-rRD"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="6qA-b3-Wov"/>
+                                <include reference="E0i-5z-qdW"/>
                                 <include reference="3Xz-yd-ulx"/>
                                 <include reference="gsX-nG-AbF"/>
                                 <include reference="3fY-LC-hE4"/>
                                 <include reference="lFW-i3-v0F"/>
-                                <include reference="E0i-5z-qdW"/>
-                                <include reference="6qA-b3-Wov"/>
                             </mask>
                         </variation>
                     </view>
@@ -103,6 +104,7 @@
                         <viewControllerLayoutGuide type="bottom" id="MIF-4M-SzD"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="DBA-eq-eFl">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XV5-Zd-MfN">
@@ -125,21 +127,11 @@
                                     <action selector="playFastAudio:" destination="Joa-L8-ret" eventType="touchUpInside" id="y31-L5-pfs"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XDd-hs-Tph">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" image="Stop"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="175" y="530" width="50" height="50"/>
-                                </variation>
-                                <connections>
-                                    <action selector="stopAudioPlayer:" destination="Joa-L8-ret" eventType="touchUpInside" id="cz8-MV-6Jt"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BdC-qJ-q4F">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" image="DarthVader"/>
                                 <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="260" y="227" width="100" height="100"/>
+                                    <rect key="frame" x="260" y="327" width="100" height="100"/>
                                 </variation>
                                 <connections>
                                     <action selector="playDarthVaderAudio:" destination="Joa-L8-ret" eventType="touchUpInside" id="a48-rB-h1Q"/>
@@ -149,10 +141,20 @@
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" image="Chipmunk"/>
                                 <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="40" y="227" width="100" height="100"/>
+                                    <rect key="frame" x="40" y="327" width="100" height="100"/>
                                 </variation>
                                 <connections>
                                     <action selector="playChipmunkAudio:" destination="Joa-L8-ret" eventType="touchUpInside" id="oG7-UG-dNe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XDd-hs-Tph">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="Stop"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="175" y="485" width="50" height="50"/>
+                                </variation>
+                                <connections>
+                                    <action selector="stopAudioPlayer:" destination="Joa-L8-ret" eventType="touchUpInside" id="cz8-MV-6Jt"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -173,42 +175,42 @@
                             <mask key="subviews">
                                 <exclude reference="XV5-Zd-MfN"/>
                                 <exclude reference="GJY-Q9-pz1"/>
-                                <exclude reference="XDd-hs-Tph"/>
                                 <exclude reference="BdC-qJ-q4F"/>
                                 <exclude reference="JgG-Kb-y6q"/>
+                                <exclude reference="XDd-hs-Tph"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="EkV-Qa-Lw0"/>
-                                <exclude reference="OW1-0w-sNg"/>
-                                <exclude reference="SkQ-OX-eqM"/>
-                                <exclude reference="egu-Em-PMp"/>
-                                <exclude reference="HR0-md-j9A"/>
-                                <exclude reference="kfZ-ol-yct"/>
+                                <exclude reference="hOa-Ca-N8h"/>
                                 <exclude reference="6fp-jE-sae"/>
                                 <exclude reference="XZD-yI-K7y"/>
+                                <exclude reference="HR0-md-j9A"/>
+                                <exclude reference="kfZ-ol-yct"/>
+                                <exclude reference="SkQ-OX-eqM"/>
+                                <exclude reference="egu-Em-PMp"/>
                                 <exclude reference="Mgn-ya-8E6"/>
-                                <exclude reference="hOa-Ca-N8h"/>
+                                <exclude reference="EkV-Qa-Lw0"/>
+                                <exclude reference="OW1-0w-sNg"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="XV5-Zd-MfN"/>
                                 <include reference="GJY-Q9-pz1"/>
-                                <include reference="XDd-hs-Tph"/>
                                 <include reference="BdC-qJ-q4F"/>
                                 <include reference="JgG-Kb-y6q"/>
+                                <include reference="XDd-hs-Tph"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="EkV-Qa-Lw0"/>
-                                <include reference="OW1-0w-sNg"/>
-                                <include reference="SkQ-OX-eqM"/>
-                                <include reference="egu-Em-PMp"/>
-                                <include reference="HR0-md-j9A"/>
-                                <include reference="kfZ-ol-yct"/>
+                                <include reference="hOa-Ca-N8h"/>
                                 <include reference="6fp-jE-sae"/>
                                 <include reference="XZD-yI-K7y"/>
+                                <include reference="HR0-md-j9A"/>
+                                <include reference="kfZ-ol-yct"/>
+                                <include reference="SkQ-OX-eqM"/>
+                                <include reference="egu-Em-PMp"/>
                                 <include reference="Mgn-ya-8E6"/>
-                                <include reference="hOa-Ca-N8h"/>
+                                <include reference="EkV-Qa-Lw0"/>
+                                <include reference="OW1-0w-sNg"/>
                             </mask>
                         </variation>
                     </view>
