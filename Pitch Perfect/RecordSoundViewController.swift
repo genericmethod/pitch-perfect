@@ -66,20 +66,16 @@ class RecordSoundViewController: UIViewController, AVAudioRecorderDelegate {
     }
     
     @IBAction func recordAudio(sender: UIButton) {
-        
-        print("Record Button Clicked ...")
-        
+       
         if (!recording){
-            print("Recording ...")
             recordingStatusLabel.hidden = false
-            recordingStatusLabel.text = "recording"
+            recordingStatusLabel.text = "Recording. Tap to pause"
             stopButton.hidden = false
             audioRecorder.record()
             recording = true
         } else {
-            print("Recording Paused ...")
             audioRecorder.pause()
-            recordingStatusLabel.text = "Tap again to continue recording"
+            recordingStatusLabel.text = "Tap again to resume recording"
             recording = false
         }
     }
